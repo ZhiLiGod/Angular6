@@ -44,6 +44,16 @@ export class AppComponent {
 	title = 'app';
 	myVar = 'test';
 	disabled = false;
+
+	data = [{
+		name: 'zhi',
+		online: true
+	},
+	{
+		name: 'li',
+		online: false
+	}];
+
 	consturctor() {
 		this.aSimpleMethod(5, 2);
 	}
@@ -56,5 +66,10 @@ export class AppComponent {
 	clickFunc() {
 		this.disabled = !this.disabled;
 		console.log("button called");
+	}
+
+	updateValue(e) {
+		this.myVar = e.target.value;
+		console.log(e.target.value);
 	}
 }

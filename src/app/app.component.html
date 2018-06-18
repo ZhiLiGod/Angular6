@@ -7,7 +7,26 @@
 <br />
 We have a custom component <app-hello></app-hello>
 
-<input type="text" [value]="myVar" [disabled]="disabled">
+<input type="text"
+  [value]="myVar"
+  [disabled]="disabled"
+  (input)="updateValue($event)">
 {{ myVar }}
 
+<input type="text" [(ngModel)]="text">
+{{ text }}
+
 <button (click)="clickFunc()">Disabled</button>
+
+<table>
+  <tr>
+    <td>#</td>
+    <td>name</td>
+    <td>online</td>
+  </tr>
+  <tr *ngFor="let record of data; let myIndex = index">
+    <td>{{ myIndex + 1 }}</td>
+    <td>{{ record.name }}</td>
+    <td>{{ record.online === true ? 'Yes' : 'No' }}</td>
+  </tr>
+</table>
