@@ -24,9 +24,15 @@ We have a custom component <app-hello></app-hello>
     <td>name</td>
     <td>online</td>
   </tr>
-  <tr *ngFor="let record of data; let myIndex = index">
+  <tr *ngFor="let record of data; let myIndex = index; let firstEle = first">
     <td>{{ myIndex + 1 }}</td>
     <td>{{ record.name }}</td>
     <td>{{ record.online === true ? 'Yes' : 'No' }}</td>
   </tr>
+
+  <tr *ngFor="let record of records">
+      <td>{{ myIndex + 1 }}</td>
+      <td>{{ record.name }}</td>
+      <td>{{ record.online === true ? 'Yes' : 'No' }}</td>
+    </tr>
 </table>

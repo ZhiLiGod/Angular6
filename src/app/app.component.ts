@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { RecordsService } from './records.service';
 import { HelloComponent } from './hello/hello.component';
+
 
 function log(target, name, descriptor) {
 	console.log(target, name, descriptor)
@@ -53,9 +55,15 @@ export class AppComponent {
 		name: 'li',
 		online: false
 	}];
-
-	consturctor() {
+	records = {};
+	
+	constructor(private myFirstService : RecordsService) {
 		this.aSimpleMethod(5, 2);
+		
+	}
+
+	ngOnInit() {
+		this.records = this.myFirstService.getData();
 	}
 
 	@log
