@@ -25,7 +25,7 @@ function log1(className) {
 	}
 }
 
-@log1
+// @log1
 class myExampleClass {
 	constructor(arg1, arg2) {
 		console.log("constructor fired")
