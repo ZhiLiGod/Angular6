@@ -64,6 +64,7 @@ export class AppComponent {
 
 	ngOnInit() {
 		this.records = this.myFirstService.getData();
+		var resultFromHttpReq = this.myFirstService.getDataFromHttpReq();
 	}
 
 	@log
