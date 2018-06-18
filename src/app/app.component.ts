@@ -42,7 +42,8 @@ const myClass = new myExampleClass(5, 10)
 })
 export class AppComponent {
 	title = 'app';
-
+	myVar = 'test';
+	disabled = false;
 	consturctor() {
 		this.aSimpleMethod(5, 2);
 	}
@@ -50,5 +51,10 @@ export class AppComponent {
 	@log
 	aSimpleMethod(a, b) {
 	 	return a * b;
+	}
+
+	clickFunc() {
+		this.disabled = !this.disabled;
+		console.log("button called");
 	}
 }
