@@ -38,6 +38,10 @@ export class RecordsService {
       .subscribe(data => {
         console.log(data);
       })
+  }
 
+  getDebtorById(id) {
+    return this.http
+      .get(`/debtor/${id}`);
   }
 }
