@@ -48,6 +48,7 @@ export class AppComponent {
 	disabled = false;
 	amount = 100.12;
 	today = new Date();
+	show = true;
 
 	data = [{
 		name: 'zhi',
