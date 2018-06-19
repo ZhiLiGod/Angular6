@@ -44,4 +44,9 @@ export class RecordsService {
     return this.http
       .get(`/debtor/${id}`);
   }
+
+  getRate() {
+    return this.http
+      .get('/account');
+  }
 }

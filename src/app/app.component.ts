@@ -70,7 +70,11 @@ export class AppComponent {
 	ngOnInit() {
 		this.records = this.myFirstService.getData();
 		// var resultFromHttpReq = this.myFirstService.getDataFromHttpReq();
-		var rates = this.myFirstService.getFromProxy();
+		// var rates = this.myFirstService.getFromProxy();
+		this.myFirstService.getRate()
+			.subscribe(rates => {
+				console.log(rates);
+			})
 	}
 
 	@log
@@ -80,11 +84,11 @@ export class AppComponent {
 
 	clickFunc() {
 		this.disabled = !this.disabled;
-		console.log("button called");
+		// console.log("button called");
 	}
 
 	updateValue(e) {
 		this.myVar = e.target.value;
-		console.log(e.target.value);
+		// console.log(e.target.value);
 	}
 }
