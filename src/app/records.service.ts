@@ -9,7 +9,7 @@ interface myData {
   providedIn: 'root'
 })
 export class RecordsService {
-
+  rate;
   constructor(private http : HttpClient) {
     
   }
@@ -26,9 +26,18 @@ export class RecordsService {
   }
 
   getDataFromHttpReq() {
-    return this.http.get<myData>('http://localhost:1234/file.json')
+    return this.http.get<myData>('/rate')
       .subscribe(data => {
-        console.log(data.obj);
+        console.log(data);
       });
+  }
+
+  getFromProxy() {
+    this.rate = this.http
+      .get('/debtor/1142')
+      .subscribe(data => {
+        console.log(data);
+      })
+
   }
 }

@@ -64,7 +64,8 @@ export class AppComponent {
 
 	ngOnInit() {
 		this.records = this.myFirstService.getData();
-		var resultFromHttpReq = this.myFirstService.getDataFromHttpReq();
+		// var resultFromHttpReq = this.myFirstService.getDataFromHttpReq();
+		var rates = this.myFirstService.getFromProxy();
 	}
 
 	@log

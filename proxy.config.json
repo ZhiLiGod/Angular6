@@ -1,0 +1,10 @@
+{
+    "/debtor": {
+        "target": "http://localhost:5000",
+        "secure": false,
+        "pathRewrite": {
+            "^/debtor": ""
+        },
+        "logLevel": "debug"
+    }
+}
