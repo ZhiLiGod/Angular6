@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
 import { ReversepipePipe } from './reversepipe.pipe';
+import { RedblackDirective } from './redblack.directive';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './store/reducers';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,14 @@ import { ReversepipePipe } from './reversepipe.pipe';
     HelloComponent,
     HomeComponent,
     DataComponent,
-    ReversepipePipe
+    ReversepipePipe,
+    RedblackDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    StoreModule.forRoot(reducers, {}),
     RouterModule.forRoot([
       {
         path: 'data', // localhost:4200/data

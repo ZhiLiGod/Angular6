@@ -49,6 +49,8 @@ export class AppComponent {
 	amount = 100.12;
 	today = new Date();
 	show = true;
+	number = 200;
+	text = 'test text';
 
 	data = [{
 		name: 'zhi',

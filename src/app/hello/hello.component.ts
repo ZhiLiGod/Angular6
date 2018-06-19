@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent implements OnInit {
+  @Input() number: number;
+  @Input() text: string;
+  // Event Emitter: Name must be {var}+Change
+  @Output() numberChange = new EventEmitter<number>();
+
   myVar = "Zhi Li";
   i = 0;
   constructor() { }
@@ -15,6 +20,12 @@ export class HelloComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  addOne() {
+    this.number++;
+
+    this.numberChange.emit(this.number);
   }
 
 }

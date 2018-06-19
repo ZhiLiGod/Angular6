@@ -1,3 +1,10 @@
+<div>
+  <h3>Custom Directive</h3>
+  <p>This paragraph is a normal one</p>
+  <p appRedblack>This paragraph is a custom directive one</p>
+</div>
+
+
 <h1>This is always show</h1>
 <router-outlet></router-outlet>
 <span>I have {{ amount | currency: 'EUR' }} in my pocket</span>
@@ -25,14 +32,15 @@
   <span [ngClass]="show ? 'text-success' : 'text-danger'">Test ngClass</span>
 </div>
 <br />
-<select>
-  <option class="red">1</option>
-  <option class="red">2</option>
-  <option class="red">3</option>
-  <option class="red">4</option>
-</select>
-<br />
-We have a custom component <app-hello></app-hello>
+We have a custom component
+<div>
+  <h3>Pass var in Component</h3>
+  <app-hello [(number)]="number" [text]="text"></app-hello>
+</div>
+
+<div>
+  <p>This is parent component, the number is {{ number }}</p>
+</div>
 
 <input type="text"
   [value]="myVar"
