@@ -10,13 +10,15 @@ import { RecordsService } from './records.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { DataComponent } from './data/data.component';
+import { ReversepipePipe } from './reversepipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloComponent,
     HomeComponent,
-    DataComponent
+    DataComponent,
+    ReversepipePipe
   ],
   imports: [
     BrowserModule,

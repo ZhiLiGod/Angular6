@@ -1,7 +1,11 @@
 <h1>This is always show</h1>
 <router-outlet></router-outlet>
+<span>I have {{ amount | currency: 'EUR' }} in my pocket</span>
+<span>Today is {{ today | date }}</span><br />
 
+{{ "This is test string" | reversepipe }}
 
+<br />
 <select>
   <option class="red">1</option>
   <option class="red">2</option>

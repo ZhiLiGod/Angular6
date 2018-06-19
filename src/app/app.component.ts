@@ -46,6 +46,8 @@ export class AppComponent {
 	title = 'app';
 	myVar = 'test';
 	disabled = false;
+	amount = 100.12;
+	today = new Date();
 
 	data = [{
 		name: 'zhi',
