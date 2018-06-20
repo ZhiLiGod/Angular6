@@ -14,6 +14,7 @@ import { ReversepipePipe } from './reversepipe.pipe';
 import { RedblackDirective } from './redblack.directive';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store/reducers';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { reducers } from './store/reducers';
     HomeComponent,
     DataComponent,
     ReversepipePipe,
-    RedblackDirective
+    RedblackDirective,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RecordsService } from './records.service';
-import { HelloComponent } from './hello/hello.component';
+// import { HelloComponent } from './hello/hello.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 function log(target, name, descriptor) {
